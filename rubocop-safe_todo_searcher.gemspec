@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/ydah/rubocop-safe_todo_searcherß"
+  spec.metadata["source_code_uri"] = "https://github.com/ydah/rubocop-safe_todo_searcher"
   spec.metadata["changelog_uri"] = "https://github.com/ydah/rubocop-safe_todo_searcher/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
