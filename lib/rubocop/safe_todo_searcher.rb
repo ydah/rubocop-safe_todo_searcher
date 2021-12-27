@@ -1,10 +1,20 @@
-# frozen_string_literal: true
-
+require "rubocop"
+require "yaml"
 require_relative "safe_todo_searcher/version"
 
 module Rubocop
   module SafeTodoSearcher
     class Error < StandardError; end
-    # Your code goes here...
+
+    def self.search
+      res = ""
+      open(".rubocop_todo.yml", "r") { |f| YAML.load(f) }.each_key do |key|
+        klass = Object.const_get "RuboCop::Cop::#{key.gsub(%r{/}, "::")}"
+        res << "#{key}\n" if klass.support_autocorrect?
+      rescue StandardError
+        nil
+      end
+      print res
+    end
   end
 end
