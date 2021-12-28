@@ -14,7 +14,7 @@ module Rubocop
       rescue StandardError
         nil
       end
-      print res
+      res
     end
   end
 end
