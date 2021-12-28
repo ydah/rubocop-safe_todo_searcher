@@ -1,4 +1,5 @@
 require "rubocop"
+require "rubocop-rails"
 require "yaml"
 require_relative "safe_todo_searcher/version"
 
@@ -14,7 +15,7 @@ module Rubocop
       rescue StandardError
         nil
       end
-      print res
+      res
     end
   end
 end
