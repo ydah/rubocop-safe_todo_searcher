@@ -34,7 +34,7 @@ jobs:
           mention: 'here'
           if_mention: failure
         env:
-          github_token: ${{ github.token }}
-          slack_webhook_url: ${{ secrets.slack_webhook_url }}
-          matrix_context: ${{ tojson(matrix) }}
+          GITHUB_TOKEN: ${{ github.token }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          MATRIX_CONTEXT: ${{ toJson(matrix) }}
         if: always()
