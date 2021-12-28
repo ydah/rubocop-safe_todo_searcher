@@ -1,8 +1,7 @@
-# Rubocop::SafeTodoSearcher
+# Rubocop SafeTodoSearcher [![Gem Version](https://badge.fury.io/rb/rubocop-safe_todo_searcher.svg)](https://badge.fury.io/rb/rubocop-safe_todo_searcher) [![Maintainability](https://api.codeclimate.com/v1/badges/38a1dd096ef8135421af/maintainability)](https://codeclimate.com/github/ydah/rubocop-safe_todo_searcher/maintainability)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubocop/safe_todo_searcher`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Search `rubocop_todo.yml` to see if there are any cop that can be resolved with auto correct.  
+If you want to know if the pending remarks in your `rubocop_todo.yml `can be deleted automatically, please use it.
 
 ## Installation
 
@@ -16,13 +15,11 @@ And then execute:
 
     $ bundle install
 
-Or install it yourself as:
-
-    $ gem install rubocop-safe_todo_searcher
-
 ## Usage
 
-TODO: Write usage instructions here
+After installation, run the following on the command line.
+
+    $ safe-search
 
 ## Development
 
@@ -32,7 +29,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rubocop-safe_todo_searcher. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/rubocop-safe_todo_searcher/blob/master/CODE_OF_CONDUCT.md).
+1. Fork it
+1. Create your feature branch (`git checkout -b my-new-feature`)
+1. Test it (`rake spec`)
+1. Commit your changes (`git commit -am 'Add some feature'`)
+1. Push to the branch (`git push origin my-new-feature`)
+1. Send a pull request :)
 
 ## License
 
@@ -40,4 +42,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Rubocop::SafeTodoSearcher project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rubocop-safe_todo_searcher/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Rubocop::SafeTodoSearcher project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/ydah/rubocop-safe_todo_searcher/blob/master/CODE_OF_CONDUCT.md).
