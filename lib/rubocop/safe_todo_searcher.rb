@@ -9,7 +9,7 @@ module Rubocop
 
     def self.search
       res = ""
-      open(".rubocop_todo.yml", "r") { |f| YAML.load(f) }.each_key do |key|
+      open(".rubocop_todo.yml", "r") { |f| YAML.safe_load(f) }.each_key do |key|
         klass = Object.const_get "RuboCop::Cop::#{key.gsub(%r{/}, "::")}"
         res << "#{key}\n" if klass.support_autocorrect?
       rescue StandardError

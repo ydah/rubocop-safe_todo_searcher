@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'rubocop/safe_todo_searcher'
+require "rubocop/safe_todo_searcher"
 
 puts Rubocop::SafeTodoSearcher.search
