@@ -1,4 +1,4 @@
-# Rubocop SafeTodoSearcher [![Gem Version](https://badge.fury.io/rb/rubocop-safe_todo_searcher.svg)](https://badge.fury.io/rb/rubocop-safe_todo_searcher) [![Maintainability](https://api.codeclimate.com/v1/badges/38a1dd096ef8135421af/maintainability)](https://codeclimate.com/github/ydah/rubocop-safe_todo_searcher/maintainability)
+# Rubocop SafeTodoSearcher [![CI](https://github.com/ydah/rubocop-safe_todo_searcher/actions/workflows/ci.yml/badge.svg)](https://github.com/ydah/rubocop-safe_todo_searcher/actions/workflows/ci.yml) [![Gem Version](https://badge.fury.io/rb/rubocop-safe_todo_searcher.svg)](https://badge.fury.io/rb/rubocop-safe_todo_searcher) [![Maintainability](https://api.codeclimate.com/v1/badges/38a1dd096ef8135421af/maintainability)](https://codeclimate.com/github/ydah/rubocop-safe_todo_searcher/maintainability)
 
 Search `rubocop_todo.yml` to see if there are any cop that can be resolved with auto correct.  
 If you want to know if the pending remarks in your `rubocop_todo.yml `can be deleted automatically, please use it.
