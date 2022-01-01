@@ -11,8 +11,7 @@ module Rubocop
       if File.exist?(".rubocop_todo.yml")
         res = ""
         open(".rubocop_todo.yml", "r") { |f| YAML.safe_load(f) }.each_key do |key|
-          klass = Object.const_get "RuboCop::Cop::#{key.gsub(%r{/}, "::")}"
-          res << "#{key}\n" if klass.support_autocorrect?
+          res << "#{key}\n" if support_autocorrect?(key)
         rescue StandardError
           nil
         end
@@ -20,6 +19,11 @@ module Rubocop
       else
         "rubocop_todo.yml does not exist"
       end
+    end
+
+    def self.support_autocorrect?(key)
+      klass = Object.const_get "RuboCop::Cop::#{key.gsub(%r{/}, "::")}"
+      klass.support_autocorrect?
     end
   end
 end
