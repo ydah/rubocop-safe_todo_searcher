@@ -17,6 +17,8 @@ module Rubocop
           nil
         end
         res
+      else
+        "rubocop_todo.yml does not exist"
       end
     end
   end
