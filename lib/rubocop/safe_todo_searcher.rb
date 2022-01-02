@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rubocop"
 require "rubocop-rails"
 require "yaml"
@@ -6,8 +8,7 @@ require_relative "safe_todo_searcher/version"
 module Rubocop
   module SafeTodoSearcher
     class Error < StandardError; end
-
-    @result = ""
+    @result = +""
 
     def self.search
       if File.exist?(".rubocop_todo.yml")
