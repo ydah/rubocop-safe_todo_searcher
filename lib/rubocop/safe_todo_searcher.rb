@@ -8,17 +8,17 @@ require_relative "safe_todo_searcher/version"
 module Rubocop
   module SafeTodoSearcher
     class Error < StandardError; end
-    @result = +""
 
     def self.search
-      if File.exist?(".rubocop_todo.yml")
-        File.open(".rubocop_todo.yml", "r") { |f| YAML.safe_load(f) }.each_key do |key|
-          @result << "#{key}\n" if support_autocorrect?(key)
-        end
-        @result
-      else
-        "rubocop_todo.yml does not exist"
+      File.exist?(".rubocop_todo.yml") ? parse : "rubocop_todo.yml does not exist"
+    end
+
+    def self.parse
+      res = +""
+      File.open(".rubocop_todo.yml", "r") { |f| YAML.safe_load(f) }.each_key do |key|
+        res << "#{key}\n" if support_autocorrect?(key)
       end
+      res
     end
 
     def self.support_autocorrect?(key)
