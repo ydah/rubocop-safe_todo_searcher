@@ -12,7 +12,7 @@ module Rubocop
 
     def self.search
       if File.exist?(".rubocop_todo.yml")
-        open(".rubocop_todo.yml", "r") { |f| YAML.safe_load(f) }.each_key do |key|
+        File.open(".rubocop_todo.yml", "r") { |f| YAML.safe_load(f) }.each_key do |key|
           @result << "#{key}\n" if support_autocorrect?(key)
         end
         @result
