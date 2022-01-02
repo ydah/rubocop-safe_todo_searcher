@@ -13,8 +13,6 @@ module Rubocop
       if File.exist?(".rubocop_todo.yml")
         open(".rubocop_todo.yml", "r") { |f| YAML.safe_load(f) }.each_key do |key|
           @result << "#{key}\n" if support_autocorrect?(key)
-        rescue StandardError
-          nil
         end
         @result
       else
@@ -25,6 +23,8 @@ module Rubocop
     def self.support_autocorrect?(key)
       klass = Object.const_get "RuboCop::Cop::#{key.gsub(%r{/}, "::")}"
       klass.support_autocorrect?
+    rescue StandardError
+      nil
     end
   end
 end
