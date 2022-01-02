@@ -24,8 +24,8 @@ module Rubocop
     def self.support_autocorrect?(key)
       klass = Object.const_get "RuboCop::Cop::#{key.gsub(%r{/}, "::")}"
       klass.support_autocorrect?
-    rescue StandardError
-      nil
+    rescue NameError
+      false
     end
   end
 end
