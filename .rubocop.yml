@@ -19,3 +19,6 @@ Documentation:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Metrics:
+  Enabled: false
