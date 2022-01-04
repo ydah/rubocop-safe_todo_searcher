@@ -21,5 +21,17 @@ RSpec.describe Rubocop::SafeTodoSearcher do
         expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Rails/ActionFilter")).to be true
       end
     end
+
+    context "auto-correct is not supported" do
+      it "returns false" do
+        expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Bundler/DuplicatedGem")).to be false
+        expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Layout/EndOfLine")).to be false
+        expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Lint/AmbiguousAssignment")).to be false
+        expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Naming/AccessorMethodName")).to be false
+        expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Security/Eval")).to be false
+        expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Style/AccessModifierDeclarations")).to be false
+        expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Rails/AfterCommitOverride")).to be false
+      end
+    end
   end
 end
