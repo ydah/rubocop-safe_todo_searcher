@@ -33,5 +33,11 @@ RSpec.describe Rubocop::SafeTodoSearcher do
         expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Rails/AfterCommitOverride")).to be false
       end
     end
+
+    context "nonexistent cops" do
+      it "returns false" do
+        expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Invalid/NonExistentCops")).to be false
+      end
+    end
   end
 end
