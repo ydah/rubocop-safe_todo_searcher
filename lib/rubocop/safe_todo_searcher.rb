@@ -22,8 +22,8 @@ module Rubocop
     end
 
     def self.support_autocorrect?(key)
-      klass = Object.const_get "RuboCop::Cop::#{key.gsub(%r{/}, "::")}"
-      klass.support_autocorrect?
+      cop = Object.const_get "RuboCop::Cop::#{key.gsub(%r{/}, "::")}"
+      cop.support_autocorrect? && cop.new(RuboCop::ConfigLoader.default_configuration).safe_autocorrect?
     rescue NameError
       false
     end
