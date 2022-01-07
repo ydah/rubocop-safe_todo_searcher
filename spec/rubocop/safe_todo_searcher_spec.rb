@@ -16,7 +16,6 @@ RSpec.describe Rubocop::SafeTodoSearcher do
         expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Lint/AmbiguousOperatorPrecedence")).to be true
         expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Migration/DepartmentName")).to be true
         expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Naming/BinaryOperatorParameterName")).to be true
-        expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Security/YAMLLoad")).to be true
         expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Style/AccessorGrouping")).to be true
         expect(Rubocop::SafeTodoSearcher.support_autocorrect?("Rails/ActionFilter")).to be true
       end
