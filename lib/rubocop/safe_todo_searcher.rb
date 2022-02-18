@@ -12,6 +12,8 @@ module Rubocop
         File.exist?(".rubocop_todo.yml") ? parse : "rubocop_todo.yml does not exist"
       end
 
+      private
+
       def parse
         res = +""
         File.open(".rubocop_todo.yml", "r") { |f| YAML.safe_load(f) }.each_key do |key|
