@@ -7,8 +7,6 @@ require_relative "safe_todo_searcher/version"
 
 module Rubocop
   module SafeTodoSearcher
-    class Error < StandardError; end
-
     class << self
       def search
         File.exist?(".rubocop_todo.yml") ? parse : "rubocop_todo.yml does not exist"
