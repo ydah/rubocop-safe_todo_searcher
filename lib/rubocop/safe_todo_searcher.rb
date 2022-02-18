@@ -21,7 +21,7 @@ module Rubocop
 
       def parse
         res = +""
-        File.open(".rubocop_todo.yml", "r") { |f| YAML.safe_load(f) }.each_key do |key|
+        File.open(".rubocop_todo.yml", "r") { |f| YAML.safe_load(f) }&.each_key do |key|
           res << "#{key}\n" if support_autocorrect?(key)
         end
         res
