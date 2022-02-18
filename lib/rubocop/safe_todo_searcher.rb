@@ -1,7 +1,12 @@
 # frozen_string_literal: true
 
 require "rubocop"
+require "rubocop-minitest"
+require "rubocop-performance"
 require "rubocop-rails"
+require "rubocop-rake"
+require "rubocop-rspec"
+require "rubocop-sequel"
 require "yaml"
 require_relative "safe_todo_searcher/version"
 
