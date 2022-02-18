@@ -1,5 +1,14 @@
 ## [Unreleased]
 
+## [0.1.3] - 2022-02-19
+
+### New features:
+- [#21](https://github.com/ydah/rubocop-safe_todo_searcher/pull/21) : Output logs to stdout to show that program is running when it is running.
+
+### Bug fixes
+- [#18](https://github.com/ydah/rubocop-safe_todo_searcher/pull/18) : Fixes to detect cops that were not supported.
+- [#19](https://github.com/ydah/rubocop-safe_todo_searcher/pull/19) : Fixes NoMethodError if none of keys are found in rubocop_todo.yml.
+
 ## [0.1.2] - 2022-01-07
 
 ### New features:
