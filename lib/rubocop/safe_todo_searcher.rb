@@ -31,11 +31,9 @@ module Rubocop
       end
 
       def parse
-        res = +""
-        File.open(RUBOCOP_TODO_YML, "r") { |f| YAML.safe_load(f) }&.each_key do |key|
-          res << "#{key}\n" if support_autocorrect?(key)
-        end
-        res
+        File.open(RUBOCOP_TODO_YML, "r") { |f| YAML.safe_load(f) }&.map do |key|
+          "#{key}\n" if support_autocorrect?(key)
+        end&.compact
       end
 
       def support_autocorrect?(key)
