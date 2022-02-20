@@ -17,7 +17,7 @@ module Rubocop
     RUBOCOP_TODO_YML = ".rubocop_todo.yml"
 
     class << self
-      def search
+      def run
         puts generate_header
         puts horizontal_line
         puts generate_results
@@ -31,11 +31,9 @@ module Rubocop
       end
 
       def parse
-        res = +""
-        File.open(RUBOCOP_TODO_YML, "r") { |f| YAML.safe_load(f) }&.each_key do |key|
-          res << "#{key}\n" if support_autocorrect?(key)
-        end
-        res
+        File.open(RUBOCOP_TODO_YML, "r") { |f| YAML.safe_load(f) }&.map do |key|
+          "#{key}\n" if support_autocorrect?(key)
+        end&.compact
       end
 
       def support_autocorrect?(key)

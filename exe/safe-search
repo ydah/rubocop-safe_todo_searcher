@@ -2,4 +2,4 @@
 
 require "rubocop/safe_todo_searcher"
 
-Rubocop::SafeTodoSearcher.search
+Rubocop::SafeTodoSearcher.run
