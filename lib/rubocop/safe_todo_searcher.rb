@@ -17,7 +17,7 @@ module Rubocop
     RUBOCOP_TODO_YML = ".rubocop_todo.yml"
 
     class << self
-      def search
+      def run
         puts generate_header
         puts horizontal_line
         puts generate_results
