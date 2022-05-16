@@ -2,5 +2,8 @@
 
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in rubocop-safe_todo_searcher.gemspec
 gemspec
+
+gem 'highline'
+gem 'rake'
+gem 'rspec'
