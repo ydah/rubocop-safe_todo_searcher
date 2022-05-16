@@ -3,7 +3,7 @@
 RSpec.describe Rubocop::SafeTodoSearcher do
   describe 'version' do
     it 'has a version number' do
-      expect(Rubocop::SafeTodoSearcher::VERSION).not_to be nil
+      expect(Rubocop::SafeTodoSearcher::VERSION).not_to be_nil
     end
   end
 end
