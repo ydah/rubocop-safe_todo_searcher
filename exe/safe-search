@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require "rubocop/safe_todo_searcher"
+require 'rubocop/safe_todo_searcher'
 
 Rubocop::SafeTodoSearcher.run
