@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-RSpec.describe Rubocop::SafeTodoSearcher do
+RSpec.describe RuboCop::SafeTodoSearcher do
   describe 'version' do
     it 'has a version number' do
-      expect(Rubocop::SafeTodoSearcher::VERSION).not_to be_nil
+      expect(RuboCop::SafeTodoSearcher::VERSION).not_to be_nil
     end
   end
 end

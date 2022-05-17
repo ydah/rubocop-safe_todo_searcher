@@ -4,7 +4,7 @@ require_relative 'lib/rubocop/safe_todo_searcher/version'
 
 Gem::Specification.new do |spec|
   spec.name = 'rubocop-safe_todo_searcher'
-  spec.version = Rubocop::SafeTodoSearcher::VERSION
+  spec.version = RuboCop::SafeTodoSearcher::VERSION
   spec.authors = ['ydah']
   spec.email = ['t.yudai92@gmail.com']
 
