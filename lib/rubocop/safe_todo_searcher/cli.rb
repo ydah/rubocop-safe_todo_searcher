@@ -10,7 +10,7 @@ module RuboCop
       desc 'annotate', 'Run annotate search results.'
       option :only_safe, default: true, type: :boolean, aliases: '-a', desc: 'Only search safe autocorrectable cop.'
       def annotate
-        Commands::Annotate.call
+        Commands::Annotate.call(only_safe: options[:only_safe])
       end
     end
   end
