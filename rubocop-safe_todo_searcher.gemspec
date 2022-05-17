@@ -35,4 +35,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rubocop-rake'
   spec.add_dependency 'rubocop-rspec'
   spec.add_dependency 'rubocop-sequel'
+  spec.add_dependency 'thor'
+  spec.add_dependency 'yard'
 end
