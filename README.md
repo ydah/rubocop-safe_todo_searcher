@@ -1,4 +1,4 @@
-# Rubocop SafeTodoSearcher [![CI](https://github.com/ydah/rubocop-safe_todo_searcher/actions/workflows/ci.yml/badge.svg)](https://github.com/ydah/rubocop-safe_todo_searcher/actions/workflows/ci.yml) [![Gem Version](https://badge.fury.io/rb/rubocop-safe_todo_searcher.svg)](https://badge.fury.io/rb/rubocop-safe_todo_searcher) [![Maintainability](https://api.codeclimate.com/v1/badges/38a1dd096ef8135421af/maintainability)](https://codeclimate.com/github/ydah/rubocop-safe_todo_searcher/maintainability)
+# RuboCop SafeTodoSearcher [![CI](https://github.com/ydah/rubocop-safe_todo_searcher/actions/workflows/ci.yml/badge.svg)](https://github.com/ydah/rubocop-safe_todo_searcher/actions/workflows/ci.yml) [![Gem Version](https://badge.fury.io/rb/rubocop-safe_todo_searcher.svg)](https://badge.fury.io/rb/rubocop-safe_todo_searcher) [![Maintainability](https://api.codeclimate.com/v1/badges/38a1dd096ef8135421af/maintainability)](https://codeclimate.com/github/ydah/rubocop-safe_todo_searcher/maintainability)
 
 Search `rubocop_todo.yml` to see if there are any cop that can be resolved with auto correct.  
 If you want to know if the pending remarks in your `rubocop_todo.yml `can be deleted automatically, please use it.
@@ -13,13 +13,17 @@ gem 'rubocop-safe_todo_searcher'
 
 And then execute:
 
-    $ bundle install
+```
+bundle install
+```
 
 ## Usage
 
 After installation, run the following on the command line.
 
-    $ safe-search
+```
+bundle exec rubocop-safe_todo_searcher
+```
 
 ## Development
 
@@ -42,4 +46,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Rubocop::SafeTodoSearcher project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/ydah/rubocop-safe_todo_searcher/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the RuboCop::SafeTodoSearcher project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/ydah/rubocop-safe_todo_searcher/blob/master/CODE_OF_CONDUCT.md).
