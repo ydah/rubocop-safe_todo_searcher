@@ -29,15 +29,3 @@ jobs:
         with:
           name: code-coverage-report
           path: coverage
-      - name: Notify to slack
-        uses: 8398a7/action-slack@v3
-        with:
-          status: ${{ job.status }}
-          fields: repo,message,commit,author,action,eventname,ref,workflow,job,took
-          mention: 'here'
-          if_mention: failure
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          MATRIX_CONTEXT: ${{ toJson(matrix) }}
-        if: always()
