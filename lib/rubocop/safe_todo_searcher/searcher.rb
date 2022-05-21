@@ -1,12 +1,5 @@
 # frozen_string_literal: true
 
-require 'rubocop'
-require 'rubocop-minitest'
-require 'rubocop-performance'
-require 'rubocop-rails'
-require 'rubocop-rake'
-require 'rubocop-rspec'
-require 'rubocop-sequel'
 require 'date'
 require 'highline'
 require 'yaml'
@@ -43,7 +36,8 @@ module RuboCop
 
       def parse
         File.open(RUBOCOP_TODO_YML, 'r') { |f| YAML.safe_load(f) }&.map do |key|
-          "#{key.first}\n" if support_autocorrect?(key:, only_safe: @only_safe)
+          cop = Cop.new(key:)
+          "#{key.first}\n" if support_autocorrect?(cop:, only_safe: @only_safe)
         end&.compact
       end
 
