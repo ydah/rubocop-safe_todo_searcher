@@ -14,9 +14,9 @@ require 'yaml'
 module RuboCop
   module SafeTodoSearcher
     class Searcher
+      include Analysis
+
       class << self
-        # @param [String] source_path
-        # @return [Hash, nil]
         def call(only_safe:)
           new(only_safe:).call
         end
@@ -26,7 +26,6 @@ module RuboCop
         @only_safe = only_safe
       end
 
-      # @return [Hash, nil]
       def call
         puts generate_header
         puts horizontal_line
@@ -44,15 +43,8 @@ module RuboCop
 
       def parse
         File.open(RUBOCOP_TODO_YML, 'r') { |f| YAML.safe_load(f) }&.map do |key|
-          "#{key}\n" if support_autocorrect?(key)
+          "#{key.first}\n" if support_autocorrect?(key:, only_safe: @only_safe)
         end&.compact
-      end
-
-      def support_autocorrect?(key)
-        cop = Object.const_get "RuboCop::Cop::#{key.gsub(%r{/}, '::')}"
-        cop.support_autocorrect? && cop.new(RuboCop::ConfigLoader.default_configuration).safe_autocorrect?
-      rescue NameError
-        false
       end
 
       def generate_header
