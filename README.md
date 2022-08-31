@@ -1,7 +1,7 @@
 # RuboCop SafeTodoSearcher [![CI](https://github.com/ydah/rubocop-safe_todo_searcher/actions/workflows/ci.yml/badge.svg)](https://github.com/ydah/rubocop-safe_todo_searcher/actions/workflows/ci.yml) [![Gem Version](https://badge.fury.io/rb/rubocop-safe_todo_searcher.svg)](https://badge.fury.io/rb/rubocop-safe_todo_searcher) [![Maintainability](https://api.codeclimate.com/v1/badges/38a1dd096ef8135421af/maintainability)](https://codeclimate.com/github/ydah/rubocop-safe_todo_searcher/maintainability)
 
-Search `rubocop_todo.yml` to see if there are any cop that can be resolved with auto correct.  
-If you want to know if the pending remarks in your `rubocop_todo.yml `can be deleted automatically, please use it.
+Search `rubocop_todo.yml` to see if there are any cop that can be resolved with auto correct.\
+If you want to know if the pending remarks in your `rubocop_todo.yml`can be deleted automatically, please use it.
 
 ## Installation
 
@@ -13,7 +13,7 @@ gem 'rubocop-safe_todo_searcher'
 
 And then execute:
 
-```
+```command
 bundle install
 ```
 
@@ -21,7 +21,7 @@ bundle install
 
 After installation, run the following on the command line.
 
-```
+```command
 bundle exec rubocop-safe_todo_searcher
 ```
 
@@ -34,11 +34,11 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 1. Fork it
-1. Create your feature branch (`git checkout -b my-new-feature`)
-1. Test it (`rake spec`)
-1. Commit your changes (`git commit -am 'Add some feature'`)
-1. Push to the branch (`git push origin my-new-feature`)
-1. Send a pull request :)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Test it (`rake spec`)
+4. Commit your changes (`git commit -am 'Add some feature'`)
+5. Push to the branch (`git push origin my-new-feature`)
+6. Send a pull request :)
 
 ## License
 
